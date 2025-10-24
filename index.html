@@ -12,6 +12,9 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* full screen height */
     }
     .sticky-header {
       position: sticky;
@@ -48,6 +51,7 @@
       color: white;
       font-weight: bold;
       text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      flex: 1; /* fills remaining space between header & footer *
     }
 
     main {
@@ -56,6 +60,7 @@
       font-size: 2.5vw;
       color: #000000;
       text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+      
     }
 
     .nav-button {
@@ -107,6 +112,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center; /* centers content vertically */
+    align-items: center;     /* centers content horizontally */
+    text-align: center;      /* optional, makes text centered */
+    padding: 20px;           /* spacing for content */
+    box-sizing: border-box;
   }
 }
 
@@ -129,6 +138,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;     /* centers content horizontally */
+    text-align: center;      /* optional, makes text centered */
+    padding: 20px;           /* spacing for content */
+    box-sizing: border-box;
   }
 }
   </style>
@@ -159,6 +172,7 @@
   </footer>
 </body>
 </html>
+
 
 
 

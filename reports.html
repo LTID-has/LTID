@@ -11,6 +11,9 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* full screen height */
     }
     .sticky-header {
       position: sticky;
@@ -56,34 +59,7 @@
       color: #000000;
       text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
     }
-    btnlft {
-      padding: 20px;
-      text-align: center;
-      font-size: 2.5vw;
-      color: #000000;
-      text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
-    }
-    .nav-headbutton {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 5px 20px;
-      font-size: 2vw;
-      color: #fff;
-      background: linear-gradient(135deg, #007BFF, #00BFFF);
-      border: none;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
-      transition: all 0.3s ease;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
 
-    .nav-headbutton:hover {
-      background: linear-gradient(135deg, #0056b3, #009ACD);
-      box-shadow: 0 12px 20px rgba(0, 123, 255, 0.5);
-      transform: translateY(-3px);
-    }
     .nav-button {
       display: inline-block;
       margin: 20px 10px;
@@ -112,36 +88,59 @@
       padding: 15px 0;
       font-size: 1vw;
       color: #fff;
-      margin-top: 360px;
+      margin-top: 240px;
     }
-
     @media (max-width: 768px) {
-      .subtitle, .subtext, main, .nav-button {
-        font-size: 5vw;
-      }
+  .subtitle, .subtext, main, .nav-button {
+    font-size: 5vw;
+  }
 
-      .logo {
-        height: 80px;
-      }
+  .logo {
+    height: 80px;
+  }
 
-      footer {
-        font-size: 3vw;
-      }
-    }
+  footer {
+    font-size: 3vw;
+  }
 
-    @media (max-width: 480px) {
-      .subtitle, .subtext, main, .nav-button {
-        font-size: 6vw;
-      }
+  /* ✅ Auto-fill height */
+  main {
+    min-height: 100vh; /* makes main fill the screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers content vertically */
+    align-items: center;     /* centers content horizontally */
+    text-align: center;      /* optional, makes text centered */
+    padding: 20px;           /* spacing for content */
+    box-sizing: border-box;
+  }
+}
 
-      .logo {
-        height: 60px;
-      }
+@media (max-width: 480px) {
+  .subtitle, .subtext, main, .nav-button {
+    font-size: 6vw;
+  }
 
-      footer {
-        font-size: 3.5vw;
-      }
-    }
+  .logo {
+    height: 60px;
+  }
+
+  footer {
+    font-size: 3.5vw;
+  }
+
+  /* ✅ Auto-fill height for smaller screens */
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     /* centers content horizontally */
+    text-align: center;      /* optional, makes text centered */
+    padding: 20px;           /* spacing for content */
+    box-sizing: border-box;
+  }
+}
   </style>
 </head>
 <body>
@@ -177,4 +176,5 @@
   </footer>
 </body>
 </html>
+
 
